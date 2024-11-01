@@ -10,12 +10,6 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
 import { ChevronDown, TrendingDown } from "lucide-react";
 import {
@@ -26,7 +20,6 @@ import {
   Pie,
   PieChart,
   Cell,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -116,11 +109,11 @@ function ExpenseDashboard() {
     );
 
     // You might want to add this data to a "resolved" state instead of just removing it
-    const resolvedExpense = {
-      ...editedExpense,
-      resolvedAt: new Date().toISOString(),
-      attachedFile: selectedFile.name,
-    };
+    //const resolvedExpense = {
+    //  ...editedExpense,
+    //  resolvedAt: new Date().toISOString(),
+    //  attachedFile: selectedFile.name,
+    //};
 
     setUnreconciled(updatedExpenses);
     setIsDialogOpen(false);
